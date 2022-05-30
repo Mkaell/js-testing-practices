@@ -5,7 +5,14 @@ import AppRouter from "./router/AppRouter";
 
 const App = () => {
     return (
-        <div>
+        <div
+            style={{
+                display: "flex",
+                justifyConyent: "center",
+                flexDirection: "column",
+                alignItems: "center",
+            }}
+        >
             <Navbar />
             <AppRouter />
         </div>

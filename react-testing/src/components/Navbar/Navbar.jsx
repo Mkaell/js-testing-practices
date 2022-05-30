@@ -3,7 +3,13 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
     return (
-        <div>
+        <div
+            style={{
+                display: "flex",
+                justifyContent: "space-between",
+                width: "500px",
+            }}
+        >
             <Link data-testid="main-link" to={"/"}>
                 main
             </Link>

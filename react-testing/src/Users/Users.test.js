@@ -4,7 +4,8 @@ import Users from "./Users";
 import axios from "axios";
 import { arrayUsers } from "./constant";
 import { MemoryRouter } from "react-router-dom";
-import { renderWithRouter } from "../helpers/renderWithRouter";
+
+import { renderTestApp } from "../helpers/renderTestApp";
 
 jest.mock("axios");
 
@@ -36,7 +37,7 @@ describe("Tests Users componet", () => {
 
     test("redirect to UserDetailpage", async () => {
         axios.get.mockReturnValue(response);
-        render(renderWithRouter(<Users />));
+        render(renderTestApp(<Users />));
         const users = await screen.findAllByTestId("user-item");
         expect(users.length).toBe(3);
         userEvent.click(users[0]);
